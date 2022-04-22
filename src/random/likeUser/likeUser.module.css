@@ -1,0 +1,14 @@
+.container {
+}
+
+.likeUser {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.likeUser img {
+  height: calc(30px + 1vmin);
+}
+.img {
+  margin: 5px 5px 0 5px;
+}
