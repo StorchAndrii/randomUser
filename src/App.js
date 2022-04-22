@@ -1,6 +1,6 @@
 import "./App.css";
-import RandomUser from "./random/randomUser/RandomUser";
-import UserInfo from "./random/userInfo/UserInfo";
+import RandomUser from "./pages/randomUser/RandomUser";
+import UserInfo from "./pages/userInfo/UserInfo";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/" element={<RandomUser />} />
-          <Route path="/UserInfo" element={<UserInfo />} />
+          <Route path="/UserInfo/:userName" element={<UserInfo />} />
         </Routes>
       </header>
     </div>

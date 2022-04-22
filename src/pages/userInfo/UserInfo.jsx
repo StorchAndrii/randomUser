@@ -1,7 +1,7 @@
 import React from "react";
 
 const UserInfo = () => {
-  return <div>helllooooo</div>;
+  return <div>Тут будет полная информация :)</div>;
 };
 
 export default UserInfo;

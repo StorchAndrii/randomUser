@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getUser } from "../../features/userSlice";
-import User from "../user/User";
-import DislikeUser from "../dislikeUser/DislikeUser";
-import LikeUser from "../likeUser/LikeUser";
+import User from "../../components/user/User";
+import DislikeUser from "../../components/dislikeUser/DislikeUser";
+import LikeUser from "../../components/likeUser/LikeUser";
 import style from "./randomUser.module.css";
 
 const RandomUser = () => {

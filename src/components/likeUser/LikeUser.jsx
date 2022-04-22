@@ -12,7 +12,10 @@ const LikeUser = () => {
       LIKE
       <div className={style.likeUser}>
         {likeUser.map((likeUser) => (
-          <NavLink key={likeUser.name.first} to={"/UserInfo"}>
+          <NavLink
+            key={likeUser.name.first}
+            to={`/UserInfo/${likeUser.name.first}`}
+          >
             <div key={likeUser.dob.date} className={style.img}>
               <img src={likeUser.picture.thumbnail} alt="logo" />
             </div>
