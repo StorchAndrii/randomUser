@@ -16,7 +16,7 @@ const LikeUser = () => {
             key={likeUser.name.first}
             to={`/UserInfo/${likeUser.name.first}`}
           >
-            <div key={likeUser.dob.date} className={style.img}>
+            <div className={style.img}>
               <img src={likeUser.picture.thumbnail} alt="logo" />
             </div>
           </NavLink>

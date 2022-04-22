@@ -30,9 +30,6 @@ export const userSlice = createSlice({
     decrement: (state) => {
       state.valueDislike += 1;
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
   },
 
   extraReducers: (builder) => {
