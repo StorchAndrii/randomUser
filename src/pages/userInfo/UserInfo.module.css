@@ -1,11 +1,9 @@
 .main {
+  margin-top: 50px;
   display: grid;
-  /*  areas - расставляет обьекты согласно их псевдонимам */
   grid-template-areas:
     "img map map"
     "li map map";
-  /*grid-template-rows: 200px 1fr;*/
-  /*grid-template-columns: 200px 10fr;*/
   grid-gap: 10px;
 }
 .main li {
@@ -16,12 +14,23 @@
   grid-area: img;
 }
 
+.div_img img {
+  box-shadow: 0 0 20px 7px rgb(109, 113, 116);
+  border: 2px solid #616163;
+  border-radius: 20px;
+}
+
 .div_li {
   text-align: start;
-  padding: 0;
+  padding: 20px;
   grid-area: li;
+  box-shadow: 0 0 20px 7px rgb(109, 113, 116);
+  border: 2px solid #616163;
+  border-radius: 20px;
 }
 
 .div_map {
   grid-area: map;
+  box-shadow: 0 0 20px 7px rgb(109, 113, 116);
+  border: 2px solid #616163;
 }
