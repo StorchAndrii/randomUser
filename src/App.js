@@ -6,12 +6,12 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <main className="App-main">
         <Routes>
           <Route path="/" element={<RandomUser />} />
           <Route path="/UserInfo/:userName" element={<UserInfo />} />
         </Routes>
-      </header>
+      </main>
     </div>
   );
 }

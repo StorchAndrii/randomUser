@@ -6,52 +6,52 @@ import {
   getUser,
   increment,
   likeUser,
+  disLikeUser,
 } from "../../features/userSlice";
 import dislike from "../../images/dislike.png";
 import like from "../../images/licke.png";
 
 const User = () => {
   const dispatch = useDispatch();
-
   const user = useSelector((state) => state.userSlice.user);
-  // console.log("user");
-  // console.log(user);
-
   const countLike = useSelector((state) => state.userSlice.valueLike);
   const countDislike = useSelector((state) => state.userSlice.valueDislike);
 
   return (
     <div>
       {user.map((user) => (
-        <div key={user.id.value}>
-          <img src={user.picture.large} alt="logo" />
-          <div>
-            <div>
-              {user.name.first} {user.name.last}
+        <div className={style.main} key={user.id.value}>
+          <img className={style.avatar} src={user.picture.large} alt="logo" />
+          <div className={style.block_info}>
+            <div
+              className={style.containerImg}
+              onClick={() => {
+                dispatch(decrement());
+                dispatch(getUser());
+                dispatch(disLikeUser(user));
+              }}
+            >
+              <div className={style.centered_dis}>{countDislike} </div>
+              <img src={dislike} alt="logo" className={style.dislike} />
             </div>
-            <div>{user.cell}</div>
-            <div>{user.location.city}</div>
-          </div>
-          <div
-            className={style.container}
-            onClick={() => {
-              dispatch(decrement());
-              dispatch(getUser());
-            }}
-          >
-            <div className={style.centered}>{countDislike} </div>
-            <img src={dislike} alt="logo" className={style.dislike} />
-          </div>
-          <div
-            className={style.container}
-            onClick={() => {
-              dispatch(increment());
-              dispatch(getUser());
-              dispatch(likeUser(user));
-            }}
-          >
-            <div className={style.centered}>{countLike}</div>
-            <img className={style.like} alt="logo" src={like} />
+            <div>
+              <div>
+                {user.name.first} {user.name.last}
+              </div>
+              <div>{user.cell}</div>
+              <div>{user.location.city}</div>
+            </div>
+            <div
+              className={style.containerImg}
+              onClick={() => {
+                dispatch(increment());
+                dispatch(getUser());
+                dispatch(likeUser(user));
+              }}
+            >
+              <div className={style.centered_Like}>{countLike}</div>
+              <img className={style.like} alt="logo" src={like} />
+            </div>
           </div>
         </div>
       ))}

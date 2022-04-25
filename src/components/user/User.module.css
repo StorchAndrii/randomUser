@@ -1,15 +1,44 @@
-.container {
-  width: 600px;
+.main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar {
+  box-shadow: 0 0 20px 7px rgb(109, 113, 116);
+  border: 2px solid #616163;
+  border-radius: 20px;
+}
+.block_info {
+  display: flex;
+  margin-top: 20px;
+}
+
+.containerImg {
+  font-size: calc(8px + 2vmin);
   position: relative;
   text-align: center;
   color: white;
   cursor: pointer;
 }
-.container img {
-  height: 60px;
+.containerImg img {
+  max-height: calc(10px + 10vmin);
+}
+.dislike {
+  margin-top: 16px;
 }
 
-.centered {
+.centered_dis {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.like {
+  margin-top: 3px;
+}
+.centered_Like {
   position: absolute;
   top: 50%;
   left: 50%;

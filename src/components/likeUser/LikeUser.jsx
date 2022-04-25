@@ -6,14 +6,13 @@ import { NavLink } from "react-router-dom";
 const LikeUser = () => {
   const likeUser = useSelector((state) => state.userSlice.likeUser);
 
-  console.log(likeUser);
   return (
     <div className={style.container}>
       LIKE
       <div className={style.likeUser}>
         {likeUser.map((likeUser) => (
           <NavLink
-            key={likeUser.name.first}
+            key={likeUser.id.value}
             to={`/UserInfo/${likeUser.name.first}`}
           >
             <div className={style.img}>
