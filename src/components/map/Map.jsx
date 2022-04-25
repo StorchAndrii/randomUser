@@ -3,7 +3,7 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "400px",
-  height: "450px",
+  height: "550px",
 };
 
 function Map(props) {
@@ -14,7 +14,7 @@ function Map(props) {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "YOUR_API_KEY",
+    googleMapsApiKey: "KEY",
   });
 
   const [map, setMap] = React.useState(null);
