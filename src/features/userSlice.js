@@ -6,6 +6,7 @@ const initialState = {
   valueDislike: 0,
   user: [],
   likeUser: [],
+  disLikeUser: [],
 };
 
 export const getUser = createAsyncThunk("userSlice/getUser", async () => {
@@ -19,6 +20,10 @@ export const userSlice = createSlice({
   reducers: {
     likeUser: (state, user) => {
       state.likeUser.push(user.payload);
+    },
+
+    disLikeUser: (state, user) => {
+      state.disLikeUser.push(user.payload);
     },
     increment: (state) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
@@ -40,7 +45,7 @@ export const userSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, likeUser, incrementByAmount } =
+export const { increment, decrement, likeUser, disLikeUser } =
   userSlice.actions;
 
 export default userSlice.reducer;

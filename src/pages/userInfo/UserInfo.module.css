@@ -1,0 +1,27 @@
+.main {
+  display: grid;
+  /*  areas - расставляет обьекты согласно их псевдонимам */
+  grid-template-areas:
+    "img map map"
+    "li map map";
+  grid-template-rows: 200px 1fr;
+  grid-template-columns: 200px 10fr;
+  grid-gap: 100px;
+}
+.main li {
+  list-style: none;
+}
+
+.div_img {
+  grid-area: img;
+}
+
+.div_li {
+  text-align: start;
+  padding: 0;
+  grid-area: li;
+}
+
+.div_map {
+  grid-area: map;
+}
